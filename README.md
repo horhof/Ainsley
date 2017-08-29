@@ -17,10 +17,7 @@ outputs ::=
 
 selector ::= word+
 
-term ::= 
-  sync-data
-  | async-data
-  | lambda
+term ::= sync-data | async-data | lambda
 
 term-list ::= (term | "[" term "]") ("," (term | "[" term "]"))*
 
