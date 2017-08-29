@@ -1,5 +1,7 @@
 # Ainsley
 
+## Grammar
+
 ```ebnf
 interface ::= (property | procedure | function)
 
@@ -21,6 +23,8 @@ term ::= (word+ | lambda | async)
 ```
 
 ## Overview
+
+Each line is a separate interface, each interface either a property, procedure, or function.
 
 ![interface](interface.png)
 
