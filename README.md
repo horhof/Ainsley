@@ -3,7 +3,7 @@
 ## Grammar
 
 ```ebnf
-interface ::= property | method output-list?
+interface ::= property | method outputs?
 
 property ::= selector "?"?
 
@@ -12,7 +12,7 @@ method ::=
   | selector "?"
   | selector ":" term-list ("." | "=" term)
 
-output-list ::=
+outputs ::=
   word+ ":" selector (word+ ":" selector)*
 
 selector ::= word+
@@ -35,7 +35,7 @@ lambda ::= "{" (selector "!" | term-list | term-list? "=" term) "}"
 
 ### Interface
 
-Each line is a separate interface, each interface either a property, procedure, or function.
+Each line is a separate interface, each interface either a property or a method.
 
 ![interface](interface.png)
 
@@ -43,30 +43,32 @@ Each line is a separate interface, each interface either a property, procedure, 
 
 ![property](property.png)
 
-### Procedure
+### Method
 
-![procedure](procedure.png)
+![Method](method.png)
 
-### Function
+### Outputs
 
-![function](function.png)
+![Outputs](outputs.png)
 
-### Parameter list
+### Selector
 
-![parameter-list](parameter-list.png)
+![selector](selector.png)
+
+### Terms
+
+![Term](term.png)
+
+![Term list](term-list.png)
 
 ### Lambda
 
 ![lambda](lambda.png)
 
-### Async
+### Sync data
 
-![async](async.png)
+![Sync data](sync-data.png)
 
-### Selector
+### Async data
 
-![selector](selector2.png)
-
-### Term
-
-![term](term.png)
+![Async data](async-data.png)
