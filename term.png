@@ -1,0 +1,384 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><style id="Force_Custom_Fonts" type="text/css" xml:space="preserve">@font-face{font-style:normal;font-family:"Arial";src:local("Segoe UI")}@font-face{font-style:bolder;font-family:"Arial";src:local("Segoe UI")}@font-face{font-style:normal;font-family:"Verdana";src:local("Segoe UI")}@font-face{font-style:bolder;font-family:"Verdana";src:local("Segoe UI")}</style><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="generator" content="Railroad Diagram Generator 1.48.1593"><style type="text/css" xml:space="preserve">
+    ::-moz-selection
+    {
+      color: #FFFCF0;
+      background: #0F0C00;
+    }
+    ::selection
+    {
+      color: #FFFCF0;
+      background: #0F0C00;
+    }      
+    .ebnf a
+    {
+      text-decoration: none;
+    }
+    .ebnf a:hover
+    {
+      color: #050400;
+      text-decoration: underline;
+    }    
+    .signature
+    {
+      color: #806600;
+      font-size: 11px;
+      text-align: right;
+    }
+    body
+    {
+      font: normal 12px Verdana, sans-serif;
+      color: #0F0C00;
+      background: #FFFCF0;
+    }
+    a:link, a:visited
+    {
+      color: #0F0C00;
+    }
+    a:link.signature, a:visited.signature
+    {
+      color: #806600;
+    }
+    a.button, #tabs li a
+    {
+      padding: 0.25em 0.5em;
+      border: 1px solid #806600;
+      background: #F1E8C6;
+      color: #806600;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.button:hover, #tabs li a:hover
+    {
+      color: #050400;
+      background: #FFF6D1;
+      border-color: #050400;       
+    }     
+    #tabs
+    {
+      padding: 3px 10px;
+      margin-left: 0;
+      margin-top: 58px;
+      border-bottom: 1px solid #0F0C00;
+    }  
+    #tabs li
+    {
+      list-style: none;
+      margin-left: 5px;
+      display: inline;
+    }
+    #tabs li a
+    {     
+      border-bottom: 1px solid #0F0C00;
+    }
+    #tabs li a.active
+    {
+      color: #0F0C00;
+      background: #FFFCF0;
+      border-color: #0F0C00;
+      border-bottom: 1px solid #FFFCF0;
+      outline: none;
+    }
+    #divs div
+    {
+      display: none;
+      overflow:auto;
+    }
+    #divs div.active
+    {
+      display: block;
+    }
+    #text
+    {
+      border-color: #806600;
+      background: #FFFEFA;
+      color: #050400;
+    }
+    .small
+    {
+      vertical-align: top;
+      text-align: right;
+      font-size: 9px;
+      font-weight: normal;
+      line-height: 120%;
+    }
+    td.small
+    {
+      padding-top: 0px;
+    }
+    .hidden
+    {
+      visibility: hidden;
+    }
+    td:hover .hidden 
+    {
+      visibility: visible;
+    }
+    div.download
+    {
+      display: none;
+      background: #FFFCF0;
+      position: absolute;
+      right: 34px;
+      top: 94px;
+      padding: 10px;
+      border: 1px dotted #0F0C00;
+    }
+    #divs div.ebnf, div.ebnf
+    {
+      display: block;
+      padding-left: 16px;
+      padding-top: 2px; 
+      padding-bottom: 2px; 
+      background: #FFF6D1;
+    }
+    tr.option-line td:first-child
+    {
+      text-align: right
+    }
+    tr.option-text td
+    {
+      padding-bottom: 10px
+    }
+    table.palette
+    {
+      border-top: 1px solid #050400;
+      border-right: 1px solid #050400;
+      margin-bottom: 4px
+    }
+    td.palette
+    {
+      border-bottom: 1px solid #050400;
+      border-left: 1px solid #050400;
+    }
+    a.palette
+    {
+      padding: 2px 3px 2px 10px;
+      text-decoration: none;
+    }
+    .palette
+    {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      -ms-user-select: none;
+    }
+  </style></head>
+   <body>
+      
+      <p style="font-size: 14px; font-weight:bold"><a name="interface">interface:</a></p>
+      <img border="0" src="diagram/interface.png" height="124" width="178" usemap="#interface.map"><map name="interface.map">
+         <area shape="rect" coords="49,1,119,33" href="#property" title="property">
+         <area shape="rect" coords="49,45,129,77" href="#procedure" title="procedure">
+         <area shape="rect" coords="49,89,115,121" href="#function" title="function"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#interface" title="interface" shape="rect">interface</a>
+         ::= <a href="#property" title="property" shape="rect">property</a>
+           | <a href="#procedure" title="procedure" shape="rect">procedure</a>
+           | <a href="#function" title="function" shape="rect">function</a></pre></div>
+         
+      </p>
+      
+      <p>no references</p><br><p style="font-size: 14px; font-weight:bold"><a name="property">property:</a></p>
+      <img border="0" src="diagram/property.png" height="36" width="124" usemap="#property.map"><map name="property.map">
+         <area shape="rect" coords="29,1,95,33" href="#selector" title="selector"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#property" title="property" shape="rect">property</a> ::= <a href="#selector" title="selector" shape="rect">selector</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#interface" title="interface">interface</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="procedure">procedure:</a></p>
+      <img border="0" src="diagram/procedure.png" height="68" width="332" usemap="#procedure.map"><map name="procedure.map">
+         <area shape="rect" coords="29,1,95,33" href="#selector" title="selector">
+         <area shape="rect" coords="135,33,239,65" href="#parameter-list" title="parameter-list"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#procedure" title="procedure" shape="rect">procedure</a>
+         ::= <a href="#selector" title="selector" shape="rect">selector</a> <a href="#parameter-list" title="parameter-list" shape="rect">parameter-list</a>? '.'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#interface" title="interface">interface</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="function">function:</a></p>
+      <img border="0" src="diagram/function.png" height="68" width="406" usemap="#function.map"><map name="function.map">
+         <area shape="rect" coords="29,1,95,33" href="#selector" title="selector">
+         <area shape="rect" coords="135,33,239,65" href="#parameter-list" title="parameter-list">
+         <area shape="rect" coords="329,1,377,33" href="#term" title="term"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#function" title="function" shape="rect">function</a> ::= <a href="#selector" title="selector" shape="rect">selector</a> <a href="#parameter-list" title="parameter-list" shape="rect">parameter-list</a>? '=' <a href="#term" title="term" shape="rect">term</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#interface" title="interface">interface</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="lambda">lambda:</a></p>
+      <img border="0" src="diagram/lambda.png" height="156" width="456" usemap="#lambda.map"><map name="lambda.map">
+         <area shape="rect" coords="97,1,163,33" href="#selector" title="selector">
+         <area shape="rect" coords="97,45,201,77" href="#parameter-list" title="parameter-list">
+         <area shape="rect" coords="117,121,221,153" href="#parameter-list" title="parameter-list">
+         <area shape="rect" coords="311,89,359,121" href="#term" title="term"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#lambda" title="lambda" shape="rect">lambda</a>   ::= '{' ( <a href="#selector" title="selector" shape="rect">selector</a> | <a href="#parameter-list" title="parameter-list" shape="rect">parameter-list</a> | <a href="#parameter-list" title="parameter-list" shape="rect">parameter-list</a>? '=' <a href="#term" title="term" shape="rect">term</a> ) '}'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#term" title="term">term</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="selector">selector:</a></p>
+      <img border="0" src="diagram/selector.png" height="84" width="234" usemap="#selector.map"><map name="selector.map">
+         <area shape="rect" coords="49,17,99,49" href="#word" title="word"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#selector" title="selector" shape="rect">selector</a> ::= <a href="#word" title="word" shape="rect">word</a>+ '?'?</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#function" title="function">function</a></li>
+            
+            <li><a href="#lambda" title="lambda">lambda</a></li>
+            
+            <li><a href="#procedure" title="procedure">procedure</a></li>
+            
+            <li><a href="#property" title="property">property</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="async">async:</a></p>
+      <img border="0" src="diagram/async.png" height="52" width="248" usemap="#async.map"><map name="async.map">
+         <area shape="rect" coords="99,17,149,49" href="#word" title="word"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#async" title="async" shape="rect">async</a>    ::= '&lt;' <a href="#word" title="word" shape="rect">word</a>+ '&gt;'</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#term" title="term">term</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="parameter-list">parameter-list:</a></p>
+      <img border="0" src="diagram/parameter-list.png" height="80" width="190" usemap="#parameter-list.map"><map name="parameter-list.map">
+         <area shape="rect" coords="93,45,141,77" href="#term" title="term"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#parameter-list" title="parameter-list" shape="rect">parameter-list</a>
+         ::= ':' <a href="#term" title="term" shape="rect">term</a> ( ',' <a href="#term" title="term" shape="rect">term</a> )*</pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#function" title="function">function</a></li>
+            
+            <li><a href="#lambda" title="lambda">lambda</a></li>
+            
+            <li><a href="#procedure" title="procedure">procedure</a></li>
+            
+         </ul>
+         
+      </p><br><p style="font-size: 14px; font-weight:bold"><a name="term">term:</a></p>
+      <img border="0" src="diagram/term.png" height="140" width="188" usemap="#term.map"><map name="term.map">
+         <area shape="rect" coords="69,17,119,49" href="#word" title="word">
+         <area shape="rect" coords="49,61,111,93" href="#lambda" title="lambda">
+         <area shape="rect" coords="49,105,103,137" href="#async" title="async"></map>
+      
+      <p>
+         
+         <div class="ebnf"><pre><a href="#term" title="term" shape="rect">term</a>     ::= <a href="#word" title="word" shape="rect">word</a>+
+           | <a href="#lambda" title="lambda" shape="rect">lambda</a>
+           | <a href="#async" title="async" shape="rect">async</a></pre></div>
+         
+      </p>
+      
+      <p>referenced by:
+         
+         <ul>
+            
+            <li><a href="#function" title="function">function</a></li>
+            
+            <li><a href="#lambda" title="lambda">lambda</a></li>
+            
+            <li><a href="#parameter-list" title="parameter-list">parameter-list</a></li>
+            
+         </ul>
+         
+      </p><br><hr>
+      
+      <p>
+         
+         <table border="0" class="signature">
+            
+            <tr>
+               
+               <td style="width: 100%">&nbsp;</td>
+               
+               <td valign="top">
+                  
+                  <nobr class="signature">... generated by <a name="Railroad-Diagram-Generator" class="signature" title="http://www.bottlecaps.de/rr/ui" href="http://www.bottlecaps.de/rr/ui" target="_blank">Railroad Diagram Generator</a></nobr>
+                  
+               </td>
+               
+               <td><a name="Railroad-Diagram-Generator" title="http://www.bottlecaps.de/rr/ui" href="http://www.bottlecaps.de/rr/ui" target="_blank">
+                     <img border="0" src="diagram/rr-1.48.1593.png" height="16" width="16"></a></td>
+               
+            </tr>
+            
+         </table>
+         
+      </p>
+      
+   </body>
+</html>
