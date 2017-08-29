@@ -24,22 +24,40 @@ term ::= (word+ | lambda | async)
 
 ## Overview
 
+### Interface
+
 Each line is a separate interface, each interface either a property, procedure, or function.
 
 ![interface](interface.png)
 
+### Property
+
 ![property](property.png)
+
+### Procedure
 
 ![procedure](procedure.png)
 
+### Function
+
 ![function](function.png)
+
+### Parameter list
 
 ![parameter-list](parameter-list.png)
 
+### Lambda
+
 ![lambda](lambda.png)
+
+### Async
 
 ![async](async.png)
 
+### Selector
+
 ![selector](selector.png)
+
+### Term
 
 ![term](term.png)
