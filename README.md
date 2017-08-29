@@ -56,7 +56,7 @@ Each line is a separate interface, each interface either a property, procedure, 
 
 ### Selector
 
-![selector](selector.png)
+![selector](selector2.png)
 
 ### Term
 
