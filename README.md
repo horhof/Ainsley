@@ -3,23 +3,23 @@
 ## Grammar
 
 ```ebnf
-interface ::= (property | procedure | function)
+interface ::= (property | method)
 
-property ::= selector
+property ::= selector "?"?
 
-procedure ::= selector parameter-list? "."
+method ::= selector "?"? (":" term-list ("." | "=" term))?
 
-function ::= selector parameter-list? "=" term
+lambda ::= "{" (selector "?"? | (":" term-list) | (":" term-list)? "=" term) "}"
 
-lambda ::= "{" (selector | parameter-list | parameter-list? "=" term) "}"
+selector ::= word+
 
-selector ::= word+ "?"?
+term ::= (sync-data | async-data | lambda)
 
-async ::= "<" word+ ">"
+term-list ::= term ("," term)*
 
-parameter-list ::= ":" term ("," term)*
+sync-data ::= word+
 
-term ::= (word+ | lambda | async)
+async-data ::= "<" word+ ">"
 ```
 
 ## Overview
