@@ -122,7 +122,7 @@ public senseRoom(trite: boolean, join: string)
 ### Functions
 
 ```bnf
-function ::= selector (':' term-list)? '=' term
+function ::= selector ( ':' term-list )? '=' ( term | '[' term ']' )
 ```
 
 ![](function.png)
