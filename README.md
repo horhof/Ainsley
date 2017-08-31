@@ -6,6 +6,8 @@
 interface ::= property | method outputs?
 ```
 
+![](interface.png)
+
 A single interface is either a property or a method. If a method then a further list of outputs from that method may follow.
 
 ## Properties
