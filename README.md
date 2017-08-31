@@ -16,6 +16,8 @@ A single interface is either a property or a method. If a method then a further 
 property ::= selector '?'?
 ```
 
+![](property.png)
+
 Properties describe data. Boolean properties are followed by a question mark.
 
 ```typescript
@@ -35,6 +37,8 @@ public visible: boolean
 method ::= selector '.' | selector '?' | selector ':' term-list ('.' | '=' term)
 ```
 
+![](method.png)
+
 Methods describe behavior. They may have parameters and may have return values. Methods are sub-divided by what kind of return value they give:
 
 - Procedures: void
@@ -44,8 +48,10 @@ Methods describe behavior. They may have parameters and may have return values. 
 ### Procedures
 
 ```bnf
-method ::= selector (':' term-list)? '.'
+procedure ::= selector (':' term-list)? '.'
 ```
+
+![](procedure.png)
 
 Procedures are methods returning void. They end with a period, which distinguishes them from properties.
 
@@ -87,6 +93,8 @@ public appreciate(handle: boolean, eager: number): void
 predicate ::= selector '?' (':' term-list)?
 ```
 
+![](predicate.png)
+
 Methods that return a boolean are written similarly to boolean properties.
 
 ```typescript
@@ -117,6 +125,8 @@ public senseRoom(trite: boolean, join: string)
 function ::= selector (':' term-list)? '=' term
 ```
 
+![](function.png)
+
 Functions are methods that return a value that's not boolean. The description of the return value follows an equals sign.
 
 ```typescript
@@ -139,6 +149,8 @@ public unable(): number | void
 ```bnf
 selector ::= word+
 ```
+
+![](selector.png)
 
 Both properties and methods are identified by selectors. The selector must match what's in the code but is uses spaces rather than camel-casing. Acronyms can be capitalized when they're not capitalized within the code.
 
@@ -173,6 +185,10 @@ term ::= sync-data | async-data | lambda
 term-list ::= (term | '[' term ']') (',' (term | '[' term ']'))*
 ```
 
+![](term.png)
+
+![](term-list.png)
+
 Terms are descriptions of data (or code being used as data).
 
 ### Synchronous values
@@ -181,6 +197,8 @@ Terms are descriptions of data (or code being used as data).
 sync-data ::= word+
 ```
 
+![](sync-data.png)
+
 Just a plain description of what the data represents. Doesn't have to reference the type of the data.
 
 ### Asynchronous values
@@ -188,8 +206,11 @@ Just a plain description of what the data represents. Doesn't have to reference 
 #### Async data
 
 ```bnf
-async-term ::= '<' word+ '>'
+async-data ::= '<' word+ '>'
 ```
+
+![](async-data.png)
+
 Asynchronous data are promises that eventually resolve to the indicated description.
 
 ```typescript
@@ -209,6 +230,8 @@ public causeUtter(announce: Promise<number>): void
 ```bnf
 async-procedure ::= '<' selector '>' (':' term-list)? '.'
 ```
+
+![](async-procedure.png)
 
 Asynchronous procedures are functions that promise to return void. Their selectors are surrounded by angle brackets and end with period outside the brackets.
 
@@ -232,6 +255,8 @@ public pretendLaceSync(hurt: number): void
 async-predicate ::= '<' selector '?' '>' (':' term-list)?
 ```
 
+![](async-predicate.png)
+
 Asynchronous predicates promise to return a boolean.
 
 ```typescript
@@ -254,6 +279,8 @@ public requestSoda(rapid: string): Promise<boolean>
 ```bnf
 lambda ::= '{' (selector '!' | term-list | term-list? '=' term) '}'
 ```
+
+![](lambda.png)
 
 Lambdas are surrounded by curly braces. They could be said to have the following three parts, the same as a method, except each of them is optional.
 
@@ -315,6 +342,8 @@ public mapFunction(fn: Function): Function
 ```bnf
 outputs ::= word+ ':' selector (word+ ':' selector)*
 ```
+
+![](outputs.png)
 
 Outputs describe the outgoing method calls that its parent makes on other objects. Only the first level of calls is described.
 
