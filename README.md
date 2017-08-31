@@ -140,8 +140,8 @@ public deepRest(queen: string): RecordUpdate
 **Optional** return values are written similarly to optional parameters.
 
 ```typescript
-// Unable = record ID if exists
-public unable(): number | void
+// Get resource owner = [ID if exists]
+public getResourceOwner(): number | void
 ```
 
 ## Selectors
