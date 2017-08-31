@@ -182,10 +182,13 @@ public getIncrement(): number
 
 ```bnf
 term ::= sync-data | async-data | lambda
-term-list ::= (term | '[' term ']') (',' (term | '[' term ']'))*
 ```
 
 ![](term.png)
+
+```bnf
+term-list ::= (term | '[' term ']') (',' (term | '[' term ']'))*
+```
 
 ![](term-list.png)
 
