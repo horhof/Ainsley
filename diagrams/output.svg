@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="318" height="68">
+         <defs>
+            <style type="text/css">
+               @namespace "http://www.w3.org/2000/svg";
+               .line                 {fill: none; stroke: #332900;}
+               .bold-line            {stroke: #141000; shape-rendering: crispEdges; stroke-width:
+               2; }
+               .thin-line            {stroke: #1F1800; shape-rendering: crispEdges}
+               .filled               {fill: #332900; stroke: none;}
+               text.terminal         {font-family: Verdana, Sans-serif;
+               font-size: 12px;
+               fill: #141000;
+               font-weight: bold;
+               }
+               text.nonterminal      {font-family: Verdana, Sans-serif;
+               font-size: 12px;
+               fill: #1A1400;
+               }
+               text.regexp           {font-family: Verdana, Sans-serif;
+               font-size: 12px;
+               fill: #1F1800;
+               }
+               rect, circle, polygon {fill: #332900; stroke: #332900;}
+               rect.terminal         {fill: #FFDB4D; stroke: #332900;}
+               rect.nonterminal      {fill: #FFEC9E; stroke: #332900;}
+               rect.text             {fill: none; stroke: none;}    
+               polygon.regexp        {fill: #FFF4C7; stroke: #332900;}
+               
+            </style>
+         </defs>
+         <polygon points="9 49 1 45 1 53"/>
+         <polygon points="17 49 9 45 9 53"/>
+         <a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word" xlink:title="word">
+            <rect x="71" y="35" width="50" height="32"/>
+            <rect x="69" y="33" width="50" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="79" y="53">word</text>
+         </a>
+         <rect x="161" y="35" width="24" height="32" rx="10"/>
+         <rect x="159" y="33" width="24" height="32" class="terminal" rx="10"/>
+         <text class="terminal" x="169" y="53">:</text>
+         <a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#selector" xlink:title="selector">
+            <rect x="205" y="35" width="66" height="32"/>
+            <rect x="203" y="33" width="66" height="32" class="nonterminal"/>
+            <text class="nonterminal" x="213" y="53">selector</text>
+         </a>
+         <svg:path xmlns:svg="http://www.w3.org/2000/svg" class="line" d="m17 49 h2 m40 0 h10 m50 0 h10 m-90 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -12 q0 -10 10 -10 m70 32 l20 0 m-20 0 q10 0 10 -10 l0 -12 q0 -10 -10 -10 m-70 0 h10 m0 0 h60 m20 32 h10 m24 0 h10 m0 0 h10 m66 0 h10 m-260 0 l20 0 m-1 0 q-9 0 -9 -10 l0 -28 q0 -10 10 -10 m240 48 l20 0 m-20 0 q10 0 10 -10 l0 -28 q0 -10 -10 -10 m-240 0 h10 m0 0 h230 m23 48 h-3"/>
+         <polygon points="309 49 317 45 317 53"/>
+         <polygon points="309 49 301 45 301 53"/>
+      </svg>
