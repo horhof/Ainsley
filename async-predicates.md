@@ -1,9 +1,5 @@
 # Async predicates
 
-```bnf
-async-predicate ::= '<' selector '?' '>' (':' term-list)?
-```
-
 ![](diagrams/async-predicate.svg)
 
 Asynchronous predicates promise to return a boolean.

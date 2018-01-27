@@ -1,12 +1,8 @@
 # Functions
 
-```bnf
-function ::= selector ( ':' term-list )? '=' ( term | '[' term ']' )
-```
-
 ![](diagrams/function.svg)
 
-Functions are methods that return a value that's not boolean. The description of the return value follows an equals sign.
+Functions are methods that return a value (or they'd be procedures) that's not boolean (or they'd be predicates). The description of the return value follows an equals sign.
 
 ```typescript
 // Offer harm = description

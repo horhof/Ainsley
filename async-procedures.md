@@ -1,9 +1,5 @@
 # Async procedures
 
-```bnf
-async-procedure ::= '<' selector '>' (':' term-list)? '.'
-```
-
 ![](diagrams/async-procedure.svg)
 
 Asynchronous procedures are functions that promise to return void. Their selectors are surrounded by angle brackets and end with period outside the brackets. Though they will resolve void, they can still be rejected.

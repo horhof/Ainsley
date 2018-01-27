@@ -1,9 +1,5 @@
 # Procedures
 
-```bnf
-procedure ::= selector (':' term-list)? '.'
-```
-
 ![](diagrams/procedure.svg)
 
 Procedures are methods returning void. They end with a period, which distinguishes them from properties.

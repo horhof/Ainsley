@@ -1,12 +1,8 @@
 # Predicates
 
-```bnf
-predicate ::= selector '?' (':' term-list)?
-```
-
 ![](diagrams/predicate.svg)
 
-Methods that return a boolean are written similarly to boolean properties.
+Methods that return a boolean. There is no distinction between predicates and boolean properties.
 
 ```typescript
 // Lacking?

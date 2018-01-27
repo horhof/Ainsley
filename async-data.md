@@ -1,9 +1,5 @@
 # Async data
 
-```bnf
-async-data ::= '<' word+ '>'
-```
-
 ![](diagrams/async-data.svg)
 
 Asynchronous data are promises that eventually resolve to the indicated description.

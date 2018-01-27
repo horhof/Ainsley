@@ -1,15 +1,13 @@
 # Terms
 
-```bnf
-term ::= sync-data | async-data | lambda
-```
+A term is a set of one or more pieces of data coming in or going out of an interface. When coming in, the terms are method parameters; when going out, the terms are return values.
 
-![](diagrams/term.svg)
+There are different styles for:
 
-```bnf
-term-list ::= (term | '[' term ']') (',' (term | '[' term ']'))*
-```
+1. synchronous terms, which are the same as [properties](properties.md),
+2. async terms, and
+3. lambda terms.
+
+Multiple terms can be provided, separated by commas. Optional terms are surrounded by square brackets.
 
 ![](diagrams/term-list.svg)
-
-Terms are descriptions of data (or code being used as data).
