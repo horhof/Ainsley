@@ -2,13 +2,15 @@
 
 ![](diagrams/lambda.svg)
 
-Lambdas are similar to methods except are surrounded by curly braces and treated the same as data, meaning they can be terms. They could be said to have the following three parts, the same as a method, except each of them is optional. If only a single term is within the curly braces, it represents a parameter.
+Lambdas are similar to methods except they are treated the same as data, meaning they can be terms. Lambdas are surrounded by curly braces, with one exception. They have the same three parts a method except each of them is optional.
 
 ```
 {stick: mellow, ladybug = act}
  ^^^^^    \      /        ^^^
 Selector  Parameters      Return value
 ```
+
+If only a single term is within the curly braces, it represents a parameter.
 
 Selectors are omitted except when there are no parameters nor return value. Only the following combinations represent useful patterns.
 
@@ -35,7 +37,7 @@ public removeLockFile(done: () => void): void
 public registerAlarmHandler(onAlarm: () => void): number
 ```
 
-## Then lambdas
+## Thens
 
 Then lambdas accept parameters but return nothing, used for delivering values asynchronously. The selector and the return value are omitted.
 

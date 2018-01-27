@@ -4,9 +4,9 @@ A term is a set of one or more pieces of data coming in or going out of an inter
 
 There are different styles for:
 
-1. synchronous terms, which are the same as [properties](properties.md),
-2. async terms, and
-3. lambda terms.
+1. synchronous terms, which is data available right now (and are just written the same as [properties](properties.md)),
+2. async terms, which is a wrapper around data that will eventually be available, and
+3. [lambda](lambdas.md) terms, which is code used as data.
 
 Multiple terms can be provided, separated by commas. Optional terms are surrounded by square brackets.
 
