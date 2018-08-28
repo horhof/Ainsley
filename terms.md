@@ -1,6 +1,6 @@
 # Terms
 
-A term is a set of one or more pieces of data coming in or going out of an interface. When coming in, the terms are method parameters; when going out, the terms are return values.
+A term is a pieces of data coming in or going out of an interface. When coming in, the terms are method parameters; when going out, the terms are return values.
 
 There are different styles for:
 

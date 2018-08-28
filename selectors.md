@@ -34,6 +34,9 @@ public deleteRecord(id: number): void
 // Is record?
 public isRecord(): boolean
 
+// Create table?: definition, [skip if exists?]
+public createTable(definition: TableDef, skipIfExists: boolean): boolean
+
 // Get increment = number
 public getIncrement(): number
 
