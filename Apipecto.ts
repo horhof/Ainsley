@@ -1,51 +1,28 @@
-interface Interface {
-  /** Describes what the interface does. */
-  selector: string;
-  returnBehavior: ReturnBehavior;
-  /** If not a void return, what is the term being returned. */
-  parameters: Term[];
-  returnTerm?: Term;
-}
-
-/**
- * Interfaces 
- */
-enum ReturnBehavior {
-  /** Provides a arbitrary return value. */
-  FUNCTION,
-  /** Provides a boolean return value. */
-  PREDICATE,
+/** Interfaces are always called and this describes what the call does. */
+enum CallType {
   /** Provides no return value and is called to mutate state. */
   PROCEDURE,
+  /** Provides a boolean return value. */
+  PREDICATE,
+  /** Provides an arbitrary return value. */
+  FUNCTION,
 }
-
-/**
- * A description of data provided to or returned from an interface.
- */
-interface Term {
-  selector: string;
-  type: TermType;
-  optional: boolean;
-  /** If within a wrapper that must be interfaced with, e.g. async values. */
-  wrapped: boolean;
-}
-
-
 
 /**
  * There are several kinds of terms that can be given to or returned from an
  * interface.
  *
- * Not that lists aren't a separate type; one value of type X is described the
- * same way as a several X in a list. Only when packaged in a more complex set
- * like a tuple or mapping is a separate type used.
  */
-enum TermType {
+enum DataType {
   /**
    * This term is a simple value not packaged within a higher-level data
    * structure.
+   * 
+   * Note that lists are considered raw, not a separate type. Only when
+   * packaged in a more complex set like a tuple or mapping is a separate type
+   * used.
    */
-  VALUE,
+  RAW,
   /**
    * One or more values is packaged within a data structure where there's some
    * kind of ordering process. But rather than describe the overall data
@@ -66,12 +43,33 @@ enum TermType {
   LAMBDA,
 }
 
+interface Interface {
+  /** Description of what the interface does */
+  selector: string;
+  /** What the interface does when called */
+  callType: CallType;
+  /** If not a void return, what is the term being returned. */
+  parameters: Term[];
+  returnValue?: Term;
+}
+
+/** A term is data provided to or returned from an interface. */
+interface Term {
+  /** Description of what the the term is providing */
+  selector: string;
+  /** The way in which data is delivered */
+  dataType: DataType;
+  /** If the term can be omitted */
+  optional: boolean;
+  /** If the data is wrapped in a container that resolves at a later time. */
+  async: boolean;
+}
+
 /**
- * A callable term, which shares many things with interfaces because they are
- * themselves a kind of interface treated as a term.
+ * A lambda is an interface being treated like a term, i.e. being provided to
+ * or being returned from another interface.
  *
- * There are four general types based on if they take parameters or return
- * values.
+ * There are four types based on things going into and out of the interface.
  *
  * |   Name    | Params | Return |
  * | :-------: | :----: | :----: |
@@ -80,22 +78,22 @@ enum TermType {
  * | Transform |   X    |   X    |
  * |  Getter   |        |   X    |
  *
- * Note that unlike interfaces, there's no special distinction for BOOLEAN
- * return types.
+ * Note that there's no special distinction to procedure lambdas, unlike
+ * procedure interfaces.
  */
-interface LambdaTerm extends Interface, Term {
+interface LambdaTerm extends Term, Interface {
   selector: string;
-  type: TermType.LAMBDA;
+  dataType: DataType.LAMBDA;
   parameters: Term[];
-  /** If not a void return, what is the term being returned. */
-  returnTerm?: Term;
+  returnValue?: Term;
 }
 
 var a: LambdaTerm = {
-  type: TermType.LAMBDA,
-  optional: false,
-  wrapped: false,
   selector: 'asdf',
+  dataType: DataType.LAMBDA,
+  callType: CallType.PROCEDURE,
+  optional: false,
+  async: false,
   parameters: [],
-  returnBehavior: ReturnBehavior.PROCEDURE,
+  returnValue: undefined,
 };
