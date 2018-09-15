@@ -4,6 +4,7 @@ interface Interface {
   /** Whether execution flows into this unit or this unit flows out to another. */
   direction: Direction;
   return: Return;
+  /** If not a void return, what is the term being returned. */
   returnTerm?: Term;
   parameters: Term[];
 }
@@ -30,12 +31,53 @@ interface Term {
   wrapped: boolean;
 }
 
+/**
+ * There are several kinds of terms that can be given to or returned from an
+ * interface.
+ *
+ * Not that lists aren't a separate type; one value of type X is described the
+ * same way as a several X in a list. Only when packaged in a more complex set
+ * like a tuple or mapping is a separate type used.
+ */
 enum TermType {
-  /** Simple, unstructured value that's immediately available. */
+  /**
+   * This term is a simple value not packaged within a higher-level data
+   * structure.
+   */
   VALUE,
-  /** The association between key / value is described, not the data itself. */
-  MAP,
-  /** The elements within a container are described individually. */
+  /**
+   * One or more values is packaged within a data structure where there's some
+   * kind of ordering process. But rather than describe the overall data
+   * structure as a single thing, the individual elements within it are being
+   * broken out because describing the top-level structure isn't useful.
+   */
   SET,
+  /**
+   * The term is packaged within a data structure where key names are associated
+   * with values. The *association* between the two is being described rather
+   * than the actual values.
+   */
+  MAP,
+  /**
+   * The term is itself another interface that is callable, possibly returning
+   * its own values.
+   */
   LAMBDA,
+}
+
+/**
+ * A callable term.
+ *
+ * Unlike interfaces, there's no special distinction for returning booleans.
+ *
+ * |   Name    | Params | Return |
+ * | :-------: | :----: | :----: |
+ * |   Block   |        |        |
+ * | Callback  |   Y    |        |
+ * | Transform |   X    |   X    |
+ * |  Getter   |        |   X    |
+ */
+interface Lambda {
+  params: boolean;
+  return: boolean;
 }
