@@ -1,58 +1,36 @@
 interface Interface {
   /** Describes what the interface does. */
   selector: string;
-  /** Whether execution flows into this unit or this unit flows out to another. */
-  direction: Direction;
-  parameters: Term[];
-  return: Return;
+  returnBehavior: ReturnBehavior;
   /** If not a void return, what is the term being returned. */
+  parameters: Term[];
   returnTerm?: Term;
 }
 
 /**
- * A callable term, which shares many things with interfaces because they are
- * themselves a kind of interface treated as a term.
- *
- * There are four general types based on if they take parameters or return
- * values?
- *
- * |   Name    | Params | Return |
- * | :-------: | :----: | :----: |
- * |   Block   |        |        |
- * | Callback  |   Y    |        |
- * | Transform |   X    |   X    |
- * |  Getter   |        |   X    |
- *
- * Unlike interfaces, there's no special distinction for returning booleans.
+ * Interfaces 
  */
-interface LambdaTerm {
-  selector?: string;
-  parameters: Term[];
-  /** If not a void return, what is the term being returned. */
-  returnTerm?: Term;
+enum ReturnBehavior {
+  /** Provides a arbitrary return value. */
+  FUNCTION,
+  /** Provides a boolean return value. */
+  PREDICATE,
+  /** Provides no return value and is called to mutate state. */
+  PROCEDURE,
 }
 
-enum Direction {
-  INPUT,
-  OUTPUT,
-}
-
-enum Return {
-  /** Method is called to provide a arbitrary return value. */
-  VALUE,
-  /** Method is called to provide a binary value. */
-  BOOLEAN,
-  /** Method is a procedure called to mutate state, returning nothing. */
-  VOID,
-}
-
+/**
+ * A description of data provided to or returned from an interface.
+ */
 interface Term {
-  name: string;
+  selector: string;
   type: TermType;
   optional: boolean;
   /** If within a wrapper that must be interfaced with, e.g. async values. */
   wrapped: boolean;
 }
+
+
 
 /**
  * There are several kinds of terms that can be given to or returned from an
@@ -87,3 +65,37 @@ enum TermType {
    */
   LAMBDA,
 }
+
+/**
+ * A callable term, which shares many things with interfaces because they are
+ * themselves a kind of interface treated as a term.
+ *
+ * There are four general types based on if they take parameters or return
+ * values.
+ *
+ * |   Name    | Params | Return |
+ * | :-------: | :----: | :----: |
+ * |   Block   |        |        |
+ * | Callback  |   Y    |        |
+ * | Transform |   X    |   X    |
+ * |  Getter   |        |   X    |
+ *
+ * Note that unlike interfaces, there's no special distinction for BOOLEAN
+ * return types.
+ */
+interface LambdaTerm extends Interface, Term {
+  selector: string;
+  type: TermType.LAMBDA;
+  parameters: Term[];
+  /** If not a void return, what is the term being returned. */
+  returnTerm?: Term;
+}
+
+var a: LambdaTerm = {
+  type: TermType.LAMBDA,
+  optional: false,
+  wrapped: false,
+  selector: 'asdf',
+  parameters: [],
+  returnBehavior: ReturnBehavior.PROCEDURE,
+};
