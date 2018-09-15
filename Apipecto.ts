@@ -23,7 +23,7 @@ enum CallType {
    */
   FUNCTION,
   /**
-   * Provide a switch.
+   * Predicates provide a switch.
    *
    * - Can take inputs.
    * - Always returns a boolean output.
@@ -32,43 +32,26 @@ enum CallType {
   PREDICATE,
 }
 
-/**
- * This type categorizes the kinds of terms that can be given to or returned
- * from an interface.
- *
- * Some data structures aren't represented. Lists are treated as raw types but
- * described as plural.
- */
-enum DataType {
-  /**
-   * Simple values aren't packaged within high-level data structures.
-   * 
-   */
-  RAW,
-  /**
-   * One or more values is packaged within a data structure where there's some
-   * kind of ordering process. But rather than describe the overall data
-   * structure as a single thing, the individual elements within it are being
-   * broken out because describing the top-level structure isn't useful.
-   */
-  SET,
-  /**
-   * The term is packaged within a data structure where key names are associated
-   * with values. The *association* between the two is being described rather
-   * than the actual values.
-   */
-  MAP,
-  /**
-   * The term is itself another interface that is callable, possibly returning
-   * its own values.
-   */
-  LAMBDA,
+enum LambdaType {
+  BLOCK,
+  CALLBACK,
+  TRANSFORM,
+  GETTER,
+}
+
+enum NameType {
+  /** A cohesive value is described. */
+  SINGLE,
+  /** Individual members of a collection are described. */
+  COLLECTION,
+  /** The association between members of a collection is described. */
+  ASSOCIATION,
 }
 
 /** A callable endpoint that mutates state and / or transforms data. */
 interface Interface {
-  /** The name you use when calling the interface */
-  selector: string;
+  /** This is how you call the interface. */
+  name: string;
   /** What the interface does when called */
   callType: CallType;
   parameters: Term[];
@@ -78,10 +61,12 @@ interface Interface {
 
 /** A term is data provided to or returned from an interface. */
 interface Term {
-  /** Description of what the the term is providing */
-  selector: string;
-  /** The way in which data is delivered */
-  dataType: DataType;
+  /** This is what data the term provides. */
+  name: string;
+  /** This is how the name is describing the data. */
+  nameType: NameType;
+  /** Whether or not this term represents an interface which can be called. */
+  callable: boolean;
   /** If the term can be omitted */
   optional: boolean;
   /** If the data is wrapped in a container that resolves at a later time. */
@@ -105,15 +90,15 @@ interface Term {
  * procedure interfaces.
  */
 interface LambdaTerm extends Term, Interface {
-  selector: string;
-  dataType: DataType.LAMBDA;
+  name: string;
+  nameType: NameType.LAMBDA;
   parameters: Term[];
   returnValue?: Term;
 }
 
 var a: LambdaTerm = {
-  selector: 'asdf',
-  dataType: DataType.LAMBDA,
+  name: 'asdf',
+  nameType: NameType.LAMBDA,
   callType: CallType.PROCEDURE,
   optional: false,
   async: false,
