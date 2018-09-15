@@ -1,26 +1,48 @@
-/** Interfaces are always called and this describes what the call does. */
+/**
+ * This type categorizes interfaces based on what do when they are called.
+ *
+ * Some combinations are not used. Getters, which provide values with no
+ * parameters are considered the same as properties, which aren't described by
+ * Apipecto.
+ */
 enum CallType {
-  /** Provides no return value and is called to mutate state. */
+  /**
+   * Procedures mutate state.
+   *
+   * - Can take inputs.
+   * - Never returns an output.
+   * - Always mutates state.
+   */
   PROCEDURE,
-  /** Provides a boolean return value. */
-  PREDICATE,
-  /** Provides an arbitrary return value. */
+  /**
+   * Functions transform inputs into outputs.
+   *
+   * - Always takes inputs.
+   * - Always returns an output.
+   * - May or may not also mutate state.
+   */
   FUNCTION,
+  /**
+   * Provide a switch.
+   *
+   * - Can take inputs.
+   * - Always returns a boolean output.
+   * - May or may not also mutate state.
+   */
+  PREDICATE,
 }
 
 /**
- * There are several kinds of terms that can be given to or returned from an
- * interface.
+ * This type categorizes the kinds of terms that can be given to or returned
+ * from an interface.
  *
+ * Some data structures aren't represented. Lists are treated as raw types but
+ * described as plural.
  */
 enum DataType {
   /**
-   * This term is a simple value not packaged within a higher-level data
-   * structure.
+   * Simple values aren't packaged within high-level data structures.
    * 
-   * Note that lists are considered raw, not a separate type. Only when
-   * packaged in a more complex set like a tuple or mapping is a separate type
-   * used.
    */
   RAW,
   /**
@@ -43,13 +65,14 @@ enum DataType {
   LAMBDA,
 }
 
+/** A callable endpoint that mutates state and / or transforms data. */
 interface Interface {
-  /** Description of what the interface does */
+  /** The name you use when calling the interface */
   selector: string;
   /** What the interface does when called */
   callType: CallType;
-  /** If not a void return, what is the term being returned. */
   parameters: Term[];
+  /** If not a void return, what is the term being returned. */
   returnValue?: Term;
 }
 
