@@ -3,5 +3,8 @@
   "version": "2.0.0",
   "devDependencies": {
     "gitbook": "^3.2.3"
+  },
+  "dependencies": {
+    "typescript": "^3.0.3"
   }
 }

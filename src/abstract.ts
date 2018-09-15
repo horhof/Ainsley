@@ -26,9 +26,3 @@ export interface BasicTerm {
   callable: boolean;
   async: boolean;
 }
-
-export interface Data extends BasicTerm {
-  desc?: string;
-  descType: DescType;
-  callable: false;
-}
