@@ -3,10 +3,33 @@ interface Interface {
   selector: string;
   /** Whether execution flows into this unit or this unit flows out to another. */
   direction: Direction;
+  parameters: Term[];
   return: Return;
   /** If not a void return, what is the term being returned. */
   returnTerm?: Term;
+}
+
+/**
+ * A callable term, which shares many things with interfaces because they are
+ * themselves a kind of interface treated as a term.
+ *
+ * There are four general types based on if they take parameters or return
+ * values?
+ *
+ * |   Name    | Params | Return |
+ * | :-------: | :----: | :----: |
+ * |   Block   |        |        |
+ * | Callback  |   Y    |        |
+ * | Transform |   X    |   X    |
+ * |  Getter   |        |   X    |
+ *
+ * Unlike interfaces, there's no special distinction for returning booleans.
+ */
+interface LambdaTerm {
+  selector?: string;
   parameters: Term[];
+  /** If not a void return, what is the term being returned. */
+  returnTerm?: Term;
 }
 
 enum Direction {
@@ -63,21 +86,4 @@ enum TermType {
    * its own values.
    */
   LAMBDA,
-}
-
-/**
- * A callable term.
- *
- * Unlike interfaces, there's no special distinction for returning booleans.
- *
- * |   Name    | Params | Return |
- * | :-------: | :----: | :----: |
- * |   Block   |        |        |
- * | Callback  |   Y    |        |
- * | Transform |   X    |   X    |
- * |  Getter   |        |   X    |
- */
-interface Lambda {
-  params: boolean;
-  return: boolean;
 }
