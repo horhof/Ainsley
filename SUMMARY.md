@@ -8,6 +8,8 @@
   * [Predicates](predicates.md)
   * [Functions](functions.md)
 * [Terms](terms.md)
+* Types
+  * [Booleans](booleans.md)
 * Asynchrony
   * [Async data](async-data.md)
   * [Async procedures](async-procedures.md)
