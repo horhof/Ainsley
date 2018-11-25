@@ -35,6 +35,9 @@
         "title": "Output interface",
         "sidebar_label": "Output"
       },
+      "property": {
+        "title": "Properties"
+      },
       "selector": {
         "title": "Selectors"
       },
