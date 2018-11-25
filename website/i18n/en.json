@@ -3,32 +3,39 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Easy API notation",
     "docs": {
+      "behavior": {
+        "title": "Behavior"
+      },
+      "input": {
+        "title": "Input interface",
+        "sidebar_label": "Input"
+      },
       "interface": {
-        "title": "Interface",
-        "sidebar_label": "Interface"
+        "title": "Interfaces",
+        "sidebar_label": "General"
       },
       "introduction": {
         "title": "Apipecto",
         "sidebar_label": "Introduction"
       },
-      "return": {
-        "title": "Interface return type",
-        "sidebar_label": "Return type"
+      "output": {
+        "title": "Output interface",
+        "sidebar_label": "Output"
+      },
+      "selector": {
+        "title": "Selector"
       },
       "ssl-example": {
-        "title": "SSL API",
+        "title": "SSL keychain API",
         "sidebar_label": "SSL keychain"
       },
       "term": {
-        "title": "Terms",
-        "sidebar_label": "Terms"
+        "title": "Terms"
       }
     },
     "links": {
-      "Docs": "Docs",
-      "Help": "Help"
+      "Docs": "Docs"
     },
     "categories": {
       "Introduction": "Introduction",

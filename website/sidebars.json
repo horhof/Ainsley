@@ -4,8 +4,17 @@
       "introduction"
     ],
     "Concepts": [
-      "interface",
-      "return",
+      "behavior",
+      {
+        "type": "subcategory",
+        "label": "Interfaces",
+        "ids": [
+          "interface",
+          "input",
+          "output"
+        ]
+      },
+      "selector",
       "term"
     ],
     "Examples": [
