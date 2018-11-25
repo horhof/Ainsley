@@ -1,35 +1,38 @@
 ---
 id: ssl-example
-title: SSL keychain API
-sidebar_label: SSL keychain
+title: SSL keychain
 ---
 
-## SSL enabled?
+The SSL keychain is a unit responsible for managing the PEM file on disk, generating the private key within, and adding or removing any certificates applying to that key.
+
+## API
+
+### SSL enabled?
 
 ```typescript
-public sslEnabled: boolean;
+public sslEnabled: boolean
 ```
 
-## Have certificate?
+### Have certificate?
 
 ```typescript
-public get haveCertificate(): boolean;
+public get haveCertificate(): boolean
 ```
 
-## &lt;Install certificate?>: encoded text
+### &lt;Install certificate?>: encoded text
 
 ```typescript
-public installCert(certText: string): Promise<boolean>;
+public installCert(certText: string): Promise<boolean>
 ```
 
-## Request CSR: details = encoded text
+### Request CSR: details = encoded text
 
 ```typescript
-public requestCsr(details: CertRequest): string;
+public requestCsr(details: CertRequest): string
 ```
 
-## &lt;Restart webserver>.
+### &lt;Restart webserver>.
 
 ```typescript
-public restartWebserver(): Promise<void>;
+public restartWebserver(): Promise<void>
 ```
