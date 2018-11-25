@@ -14,8 +14,19 @@
           "output"
         ]
       },
-      "selector",
-      "term"
+      {
+        "type": "subcategory",
+        "label": "Terms",
+        "ids": [
+          "term",
+          "single-term",
+          "switch-term",
+          "implicit-term",
+          "members-term",
+          "association-term"
+        ]
+      },
+      "selector"
     ],
     "Examples": [
       "ssl-example"

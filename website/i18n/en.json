@@ -4,8 +4,16 @@
     "next": "Next",
     "previous": "Previous",
     "docs": {
+      "association-term": {
+        "title": "Association descriptor terms",
+        "sidebar_label": "Association descriptors"
+      },
       "behavior": {
         "title": "Behavior"
+      },
+      "implicit-term": {
+        "title": "Implicit descriptor terms",
+        "sidebar_label": "Implicit descriptors"
       },
       "input": {
         "title": "Input interface",
@@ -19,19 +27,34 @@
         "title": "Apipecto",
         "sidebar_label": "Introduction"
       },
+      "members-term": {
+        "title": "Members descriptor terms",
+        "sidebar_label": "Members descriptors"
+      },
       "output": {
         "title": "Output interface",
         "sidebar_label": "Output"
       },
       "selector": {
-        "title": "Selector"
+        "title": "Selectors"
+      },
+      "single-term": {
+        "title": "Single descriptor terms",
+        "sidebar_label": "Single descriptors"
       },
       "ssl-example": {
-        "title": "SSL keychain API",
-        "sidebar_label": "SSL keychain"
+        "title": "SSL keychain"
+      },
+      "switch-term": {
+        "title": "Switch descriptor terms",
+        "sidebar_label": "Switch descriptors"
       },
       "term": {
-        "title": "Terms"
+        "title": "Terms",
+        "sidebar_label": "General"
+      },
+      "types": {
+        "title": "Type notations"
       }
     },
     "links": {
