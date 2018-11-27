@@ -5,7 +5,7 @@ title: Implicit returns
 
 If the descriptor for a method or lambda is itself a description of the term that is returned, then there's no need to repeat it.
 
-For example, `getActiveConnections` returns a number term which would normally be described except that this method can only return the number of active connections, which is already described in the interface selector:
+For example, this returns a number term which would normally be described except that this method can only return the number of active connections, which is already described in the interface selector:
 
 ```typescript
 calculateOverdueJobs(): number

@@ -5,7 +5,7 @@ title: Introduction
 
 Apipecto is a notation for describing the public API of a unit of code. The goal is to know at a glance how the unit is supposed to be used.
 
-See [the example](example.md).
+See [the SSL keychain example](ssl-example.md).
 
 ## What?
 

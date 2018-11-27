@@ -15,7 +15,7 @@ public isSslEnabled(): boolean;
 
 * The method descriptor is annotated with a trailing `?` because it returns a boolean.
 
-### Generate private key: strength* / MD5 hash
+### Generate private key: strength* / MD5
 
 ```typescript
 public generatePrivateKey(strength: number = 4096): string;

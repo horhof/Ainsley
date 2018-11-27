@@ -9,7 +9,7 @@ Annotation is achieved by either prefixing, suffixing, infixing, or surrounding 
 
 ## Features
 
-* Primitive types
+* Types
   * [Void](void.md) (*optional* for terms and *procedure* for methods which return it)
   * [Boolean](boolean.md) (*switch* for terms and *predicate* for methods which return one)
   * [Lambda](lambda.md)
