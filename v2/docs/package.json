@@ -1,0 +1,7 @@
+{
+  "name": "apipecto",
+  "version": "2.1.0",
+  "devDependencies": {
+    "gitbook": "^3.2.3"
+  }
+}
