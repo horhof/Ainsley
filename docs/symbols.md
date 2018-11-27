@@ -54,4 +54,4 @@ title: List of symbols
 
 ## `!`
 
-* Method selector suffix for lambdas.
+* Method selector suffix for done lambdas.
