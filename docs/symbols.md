@@ -1,5 +1,5 @@
 ---
-id: symbol
+id: symbols
 title: List of symbols
 ---
 
