@@ -39,6 +39,8 @@ Only the following combinations represent useful patterns:
 |  Getter   |     No     |     No     |   Yes   |
 | Transform |     No     |    Yes     |   Yes   |
 
+The omitted combinations are one where the three parts are absent (which doesn't make sense) and three more where the descriptor is included alongside the other parts.
+
 ## Blocks
 
 Block lambdas have no parameters and no return value.
