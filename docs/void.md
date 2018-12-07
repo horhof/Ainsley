@@ -13,7 +13,7 @@ This can be an optional parameter:
 generatePrivateKey(strength?: number): void
 ```
 
-* Generate private key: strength*.
+> Generate private key: strength*.
 
 This can also be an optional return (which is not the same as the void return of a procedure):
 
@@ -21,7 +21,7 @@ This can also be an optional return (which is not the same as the void return of
 generateDistribution(samples: number[]): DistrDetails | undefined
 ```
 
-* Generate distribution*: [sample]
+> Generate distribution*: [sample]
 
 ## Procedure
 
@@ -33,4 +33,4 @@ Without the annotation to indicate a procedure, the interpretation would instead
 generatePrivateKey(): void
 ```
 
-* Generate private key.
+> Generate private key.

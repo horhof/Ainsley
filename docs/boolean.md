@@ -11,7 +11,7 @@ Terms which are boolean values are called *switches*. Methods which return a boo
 resetServer(wipeTables: boolean): void
 ```
 
-* Reset server: wipe tables?.
+> Reset server: wipe tables?.
 
 ## Predicate
 
@@ -19,4 +19,4 @@ resetServer(wipeTables: boolean): void
 isNetworkSimulated(): boolean
 ```
 
-* Is network simulated?
+> Is network simulated?

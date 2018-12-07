@@ -11,7 +11,7 @@ For example, this returns a number term which would normally be described except
 calculateOverdueJobs(): number
 ```
 
-* Calculate overdue jobs
+> Calculate overdue jobs
 
 If we used instead a single descriptor, we would have to more or less repeat the selector in the return value:
 

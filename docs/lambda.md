@@ -38,8 +38,9 @@ removeLockFile(done: () => void): void
 registerAlarmHandler(onAlarm: () => void): number
 ```
 
-* Remove lockfile: done!.
-* Register alarm handler: on alarm! / handler ID
+> Remove lockfile: done!.
+>
+> Register alarm handler: on alarm! / handler ID
 
 ## Thens
 
@@ -49,7 +50,7 @@ Then lambdas accept parameters but return nothing, used for delivering values as
 readFile(filename: string, done: (err?, data) => void): void
 ```
 
-* Read file: filename, {error*, file contents}.
+> Read file: filename, {error*, file contents}.
 
 ## Getters
 
@@ -59,7 +60,7 @@ Getters have no parameters but do have a return value. These must have a closure
 castThankful(): { () => number }
 ```
 
-* Cast thankful / {/ timestamp}
+> Cast thankful / {/ timestamp}
 
 ## Transforms
 
@@ -69,4 +70,4 @@ Transforms take both parameters and return values.
 liftIntoList(fn: Function): Function
 ```
 
-* List into list: {before / after} / {before list / after list}
+> List into list: {before / after} / {before list / after list}

@@ -19,7 +19,7 @@ Parameters are introduced by a prefix. Items within the list have a separator be
 resetUsersByAge(minAge: number, maxAge: number): void
 ```
 
-* Reset users by age: min, max.
+> Reset users by age: min, max.
 
 ## Returns
 
@@ -29,4 +29,4 @@ Returns are separated from the parameters by a prefix. If the language permits m
 findOldestRecord(): number
 ```
 
-* Find oldest record / age
+> Find oldest record / age

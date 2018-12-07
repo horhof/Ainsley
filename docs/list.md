@@ -17,4 +17,4 @@ resetRegions(zipCodes: ZipCode[]): void
 getBooksForAuthor(authorId: number): Book[]
 ```
 
-* [Books for author] : author ID
+> [Books for author]: author ID

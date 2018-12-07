@@ -11,7 +11,7 @@ A future is a container for a value that will be available at some future time.
 queuePdfGeneration(reports: Promise<Report>[]): boolean
 ```
 
-* Queue PDF generation?: (reports)
+> Queue PDF generation: (report) / job result
 
 ## Implicit future return
 
@@ -19,4 +19,4 @@ queuePdfGeneration(reports: Promise<Report>[]): boolean
 restartWebserver(): Promise<void>
 ```
 
-* (Restart webserver).
+> (Restart webserver).

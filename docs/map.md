@@ -11,5 +11,4 @@ For example, the following interface will find the students in the given class t
 public getFailingGrades(classId: number): { [studentId: number]: number }
 ```
 
-* Get failing grades: class ID / student ID -- grade percentage
-
+> Get failing grades: class ID / student ID -- grade percentage
