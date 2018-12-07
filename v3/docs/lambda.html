@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lambdas · Apipecto</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Lambdas follow the same rules as &lt;a href=&quot;/Apipecto/v3/docs/method&quot;&gt;methods&lt;/a&gt;. They&#x27;re just the same thing as a method, packaged in a particular format, and appearing in the place of &lt;a href=&quot;/Apipecto/v3/docs/term&quot;&gt;terms of data&lt;/a&gt;.&lt;/p&gt;
-"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Lambdas · Apipecto"/><meta property="og:type" content="website"/><meta property="og:url" content="https://horhof.github.io/Apipecto//Apipecto/v3/index.html"/><meta property="og:description" content="&lt;p&gt;Lambdas follow the same rules as &lt;a href=&quot;/Apipecto/v3/docs/method&quot;&gt;methods&lt;/a&gt;. They&#x27;re just the same thing as a method, packaged in a particular format, and appearing in the place of &lt;a href=&quot;/Apipecto/v3/docs/term&quot;&gt;terms of data&lt;/a&gt;.&lt;/p&gt;
-"/><meta property="og:image" content="https://horhof.github.io/Apipecto//Apipecto/v3/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://horhof.github.io/Apipecto//Apipecto/v3/img/docusaurus.png"/><link rel="shortcut icon" href="/Apipecto/v3/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/Apipecto/v3/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Apipecto/v3/"><img class="logo" src="/Apipecto/v3/img/docusaurus.svg" alt="Apipecto"/><h2 class="headerTitleWithLogo">Apipecto</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Apipecto/v3/docs/introduction" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/introduction">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/method">Methods</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/term">Terms</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/descriptor">Descriptors</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/property">Properties</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/annotation">Annotations</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/boolean">Booleans</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Apipecto/v3/docs/lambda">Lambdas</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/void">Voids</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/list">Lists</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/set">Sets</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/map">Maps</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/implicit-return">Implicit returns</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/symbols">List of symbols</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Examples</h3><ul><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/ssl-example">SSL keychain</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lambdas · Apipecto</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Lambdas follow the same rules as &lt;a href=&quot;/Apipecto/v3/docs/method&quot;&gt;methods&lt;/a&gt;. They&#x27;re just a method appearing in the place of &lt;a href=&quot;/Apipecto/v3/docs/term&quot;&gt;terms of data&lt;/a&gt;. They generally have the same three parts a method:&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Lambdas · Apipecto"/><meta property="og:type" content="website"/><meta property="og:url" content="https://horhof.github.io/Apipecto//Apipecto/v3/index.html"/><meta property="og:description" content="&lt;p&gt;Lambdas follow the same rules as &lt;a href=&quot;/Apipecto/v3/docs/method&quot;&gt;methods&lt;/a&gt;. They&#x27;re just a method appearing in the place of &lt;a href=&quot;/Apipecto/v3/docs/term&quot;&gt;terms of data&lt;/a&gt;. They generally have the same three parts a method:&lt;/p&gt;
+"/><meta property="og:image" content="https://horhof.github.io/Apipecto//Apipecto/v3/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://horhof.github.io/Apipecto//Apipecto/v3/img/docusaurus.png"/><link rel="shortcut icon" href="/Apipecto/v3/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/Apipecto/v3/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Apipecto/v3/"><img class="logo" src="/Apipecto/v3/img/docusaurus.svg" alt="Apipecto"/><h2 class="headerTitleWithLogo">Apipecto</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Apipecto/v3/docs/introduction" target="_self">Docs</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/introduction">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Concepts</h3><ul><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/method">Methods</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/term">Terms</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/descriptor">Descriptors</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/property">Properties</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/annotation">Annotations</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/boolean">Booleans</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Apipecto/v3/docs/lambda">Lambdas</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/void">Voids</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/list">Lists</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/set">Sets</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/map">Maps</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/future">Futures</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/implicit-return">Implicit returns</a></li><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/symbols">List of symbols</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Examples</h3><ul><li class="navListItem"><a class="navItem" href="/Apipecto/v3/docs/ssl-example">SSL keychain</a></li></ul></div></div></section></div><script>
             document.addEventListener('DOMContentLoaded', function() {
               createToggler('#navToggler', '#docsNav', 'docsSliderActive');
               createToggler('#tocToggler', 'body', 'tocActive');
@@ -27,17 +27,33 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Lambdas</h1></header><article><div><span><p>Lambdas follow the same rules as <a href="/Apipecto/v3/docs/method">methods</a>. They're just the same thing as a method, packaged in a particular format, and appearing in the place of <a href="/Apipecto/v3/docs/term">terms of data</a>.</p>
-<p>They have the same three parts a method except each of them is optional.</p>
-<pre><code class="hljs">{stick: mellow, ladybug / act}
- ^^^^^    \      /        ^^^
-Selector  Parameters      <span class="hljs-keyword">Return</span> <span class="hljs-keyword">value</span>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Lambdas</h1></header><article><div><span><p>Lambdas follow the same rules as <a href="/Apipecto/v3/docs/method">methods</a>. They're just a method appearing in the place of <a href="/Apipecto/v3/docs/term">terms of data</a>. They generally have the same three parts a method:</p>
+<pre><code class="hljs css language-text">     {stick: mellow / acorn}
+      `-+-'  `--+-'   `-+-'
+        |       |       |
+Descriptor  Parameters  Return
 </code></pre>
-<p>If only a single term is within the curly braces, it represents a parameter.</p>
-<p>Descriptors are omitted except when there are no parameters nor return value. Only the following combinations represent useful patterns:</p>
+<p>The main difference between lambdas and methods is that each of these three parts can be optional.</p>
+<p><a href="/Apipecto/v3/docs/descriptor">Descriptors</a> are omitted in all cases except when there are no parameters nor return value. For example, the following lambda takes a mellow parameter and returns acorn. Stick is omitted.</p>
+<blockquote>
+<p>{mellow / acorn}</p>
+</blockquote>
+<p>The one case in which descriptives appear is a <a href="#blocks">block lambda</a>, which also removes the <a href="/Apipecto/v3/docs/symbols#curly-brace-surround">curly brace surrounds</a> and adds an <a href="/Apipecto/v3/docs/symbols#exclamation-suffix">exclamation suffix</a>:</p>
+<blockquote>
+<p>stick!</p>
+</blockquote>
+<p>If only a single term is within the curly braces, it represents the parameter of a <a href="#thens">then lambda</a>:</p>
+<blockquote>
+<p>{mellow}</p>
+</blockquote>
+<p>To use only the return value of a lambda is a <a href="#getters">getter lambda</a>:</p>
+<blockquote>
+<p>{/ action}</p>
+</blockquote>
+<p>Only the following combinations represent useful patterns:</p>
 <table>
 <thead>
-<tr><th style="text-align:center">Name</th><th style="text-align:center">Descriptor?</th><th style="text-align:center">Parameters?</th><th style="text-align:center">Returns?</th></tr>
+<tr><th style="text-align:center">Name</th><th style="text-align:center">Descriptor</th><th style="text-align:center">Parameters</th><th style="text-align:center">Returns</th></tr>
 </thead>
 <tbody>
 <tr><td style="text-align:center">Block</td><td style="text-align:center">Yes</td><td style="text-align:center">No</td><td style="text-align:center">No</td></tr>
@@ -46,6 +62,7 @@ Selector  Parameters      <span class="hljs-keyword">Return</span> <span class="
 <tr><td style="text-align:center">Transform</td><td style="text-align:center">No</td><td style="text-align:center">Yes</td><td style="text-align:center">Yes</td></tr>
 </tbody>
 </table>
+<p>The omitted combinations are one where the three parts are absent (which doesn't make sense) and three more where the descriptor is included alongside the other parts.</p>
 <h2><a class="anchor" aria-hidden="true" id="blocks"></a><a href="#blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Blocks</h2>
 <p>Block lambdas have no parameters and no return value.</p>
 <p>Their purpose is to run a fixed set of statements without outside control or observation. This can be used for done callbacks where the statements mutate data in the original caller via closure and don't need parameters or return values.</p>
@@ -53,29 +70,29 @@ Selector  Parameters      <span class="hljs-keyword">Return</span> <span class="
 <pre><code class="hljs css language-typescript">removeLockFile(done: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">void</span>): <span class="hljs-built_in">void</span>
 registerAlarmHandler(onAlarm: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">void</span>): <span class="hljs-built_in">number</span>
 </code></pre>
-<ul>
-<li>Remove lockfile: done!.</li>
-<li>Register alarm handler: on alarm! / handler ID</li>
-</ul>
+<blockquote>
+<p>Remove lockfile: done!.</p>
+<p>Register alarm handler: on alarm! / handler ID</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="thens"></a><a href="#thens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Thens</h2>
 <p>Then lambdas accept parameters but return nothing, used for delivering values asynchronously. The descriptor and the return value are omitted.</p>
 <pre><code class="hljs css language-typescript">readFile(filename: <span class="hljs-built_in">string</span>, done: <span class="hljs-function">(<span class="hljs-params">err?, data</span>) =&gt;</span> <span class="hljs-built_in">void</span>): <span class="hljs-built_in">void</span>
 </code></pre>
-<ul>
-<li>Read file: filename, {error*, file contents}.</li>
-</ul>
+<blockquote>
+<p>Read file: filename, {error*, file contents}.</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="getters"></a><a href="#getters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getters</h2>
 <p>Getters have no parameters but do have a return value. These must have a closure over some kind of state and use it for their return else they would be constant functions.</p>
 <pre><code class="hljs css language-typescript">castThankful(): { <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">number</span> }
 </code></pre>
-<ul>
-<li>Cast thankful / {/ timestamp}</li>
-</ul>
+<blockquote>
+<p>Cast thankful / {/ timestamp}</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="transforms"></a><a href="#transforms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transforms</h2>
 <p>Transforms take both parameters and return values.</p>
 <pre><code class="hljs css language-typescript">liftIntoList(fn: <span class="hljs-built_in">Function</span>): <span class="hljs-built_in">Function</span>
 </code></pre>
-<ul>
-<li>List into list: {before / after} / {before list / after list}</li>
-</ul>
+<blockquote>
+<p>List into list: {before / after} / {before list / after list}</p>
+</blockquote>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Apipecto/v3/docs/boolean"><span class="arrow-prev">← </span><span>Booleans</span></a><a class="docs-next button" href="/Apipecto/v3/docs/void"><span>Voids</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#blocks">Blocks</a></li><li><a href="#thens">Thens</a></li><li><a href="#getters">Getters</a></li><li><a href="#transforms">Transforms</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Apipecto/v3/" class="nav-home"><img src="/Apipecto/v3/img/docusaurus.svg" alt="Apipecto" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Apipecto/v3/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Apipecto/v3/docs/en/doc2.html">Guides (or other categories)</a><a href="/Apipecto/v3/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Apipecto/v3/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Apipecto/v3/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Apipecto/v3/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright"></section></footer></div></body></html>
