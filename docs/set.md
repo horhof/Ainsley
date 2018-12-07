@@ -12,4 +12,4 @@ type HttpOptions = { hostname: string, port: number }
 fetch(uri: string, opts: HttpOptions): HttpRequest
 ```
 
-* Fetch: URI, hostname + port / HTTP request
+> Fetch: URI, hostname + port / HTTP request

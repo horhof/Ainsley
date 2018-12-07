@@ -3,27 +3,43 @@ id: lambda
 title: Lambdas
 ---
 
-Lambdas follow the same rules as [methods](method.md). They're just the same thing as a method, packaged in a particular format, and appearing in the place of [terms of data](term.md).
+Lambdas follow the same rules as [methods](method.md). They're just a method appearing in the place of [terms of data](term.md). They generally have the same three parts a method:
 
-
-They have the same three parts a method except each of them is optional.
-
-```
-{stick: mellow, ladybug / act}
- ^^^^^    \      /        ^^^
-Selector  Parameters      Return value
+```text
+     {stick: mellow / acorn}
+      `-+-'  `--+-'   `-+-'
+        |       |       |
+Descriptor  Parameters  Return
 ```
 
-If only a single term is within the curly braces, it represents a parameter.
+The main difference between lambdas and methods is that each of these three parts can be optional.
 
-Descriptors are omitted except when there are no parameters nor return value. Only the following combinations represent useful patterns:
+[Descriptors](descriptor.md) are omitted in all cases except when there are no parameters nor return value. For example, the following lambda takes a mellow parameter and returns acorn. Stick is omitted.
 
-|   Name    | Descriptor? | Parameters? | Returns? |
-| :-------: | :---------: | :---------: | :------: |
-|   Block   |     Yes     |     No      |    No    |
-|   Then    |     No      |     Yes     |    No    |
-|  Getter   |     No      |     No      |   Yes    |
-| Transform |     No      |     Yes     |   Yes    |
+> {mellow / acorn}
+
+The one case in which descriptives appear is a [block lambda](#blocks), which also removes the [curly brace surrounds](symbols.md#curly-brace-surround) and adds an [exclamation suffix](symbols.md#exclamation-suffix):
+
+> stick!
+
+If only a single term is within the curly braces, it represents the parameter of a [then lambda](#thens):
+
+> {mellow}
+
+To use only the return value of a lambda is a [getter lambda](#getters):
+
+> {/ action}
+
+Only the following combinations represent useful patterns:
+
+|   Name    | Descriptor | Parameters | Returns |
+| :-------: | :--------: | :--------: | :-----: |
+|   Block   |    Yes     |     No     |   No    |
+|   Then    |     No     |    Yes     |   No    |
+|  Getter   |     No     |     No     |   Yes   |
+| Transform |     No     |    Yes     |   Yes   |
+
+The omitted combinations are one where the three parts are absent (which doesn't make sense) and three more where the descriptor is included alongside the other parts.
 
 ## Blocks
 
@@ -38,8 +54,9 @@ removeLockFile(done: () => void): void
 registerAlarmHandler(onAlarm: () => void): number
 ```
 
-* Remove lockfile: done!.
-* Register alarm handler: on alarm! / handler ID
+> Remove lockfile: done!.
+>
+> Register alarm handler: on alarm! / handler ID
 
 ## Thens
 
@@ -49,7 +66,7 @@ Then lambdas accept parameters but return nothing, used for delivering values as
 readFile(filename: string, done: (err?, data) => void): void
 ```
 
-* Read file: filename, {error*, file contents}.
+> Read file: filename, {error*, file contents}.
 
 ## Getters
 
@@ -59,7 +76,7 @@ Getters have no parameters but do have a return value. These must have a closure
 castThankful(): { () => number }
 ```
 
-* Cast thankful / {/ timestamp}
+> Cast thankful / {/ timestamp}
 
 ## Transforms
 
@@ -69,4 +86,4 @@ Transforms take both parameters and return values.
 liftIntoList(fn: Function): Function
 ```
 
-* List into list: {before / after} / {before list / after list}
+> List into list: {before / after} / {before list / after list}

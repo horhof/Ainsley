@@ -14,8 +14,9 @@ installCert(certText: string): ErrorCode | undefined
 createHttpRequest(uri: string): Promise<HttpRequest>
 ```
 
-* Install certificate: text / (error code)
-* (Create HTTP request): URI
+> Install certificate: text / (error code)
+>
+> (Create HTTP request): URI
 
 ## Omissions
 
@@ -25,4 +26,4 @@ If the first word of a method is get or set, it can be omitted. Use only one ent
 getPrivateKeyChecksum(): string;
 ```
 
-* Private key checksum
+> Private key checksum
