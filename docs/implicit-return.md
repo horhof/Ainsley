@@ -15,4 +15,9 @@ calculateOverdueJobs(): number
 
 If we used instead a single descriptor, we would have to more or less repeat the selector in the return value:
 
-* Calculate overdue jobs / overdue jobs
+> Calculate overdue jobs / overdue jobs
+
+## Data structures with implicit support
+
+* [Lists](list.md#implicit-return)
+* [Futures](future.md#implicit-return)

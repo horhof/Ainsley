@@ -5,13 +5,15 @@ title: Lists
 
 A list contains many elements of the same type. It's assumed the elements are ordered by their position.
 
-## List term
+## Term
 
 ```typescript
 resetRegions(zipCodes: ZipCode[]): void
 ```
 
-## Implicit list return
+> Reset regions: [ZIP codes].
+
+## Implicit return
 
 ```typescript
 getBooksForAuthor(authorId: number): Book[]

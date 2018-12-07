@@ -5,7 +5,7 @@ title: Futures
 
 A future is a container for a value that will be available at some future time.
 
-## Future term
+## Term
 
 ```typescript
 queuePdfGeneration(reports: Promise<Report>[]): boolean
@@ -13,7 +13,7 @@ queuePdfGeneration(reports: Promise<Report>[]): boolean
 
 > Queue PDF generation: (report) / job result
 
-## Implicit future return
+## Implicit return
 
 ```typescript
 restartWebserver(): Promise<void>
