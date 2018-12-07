@@ -1,6 +1,6 @@
 ---
-id: fugure
-title: Fugures
+id: future
+title: Futures
 ---
 
 A future is a container for a value that will be available at some future time.
