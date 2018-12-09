@@ -20,15 +20,11 @@ The main difference between lambdas and methods is that each of these three part
 
 The one case in which descriptives appear is a [block lambda](#blocks), which also removes the [curly brace surrounds](symbols.md#curly-brace-surround) and adds an [exclamation suffix](symbols.md#exclamation-suffix):
 
-> stick!
+> {stick.}
 
 If only a single term is within the curly braces, it represents the parameter of a [then lambda](#thens):
 
 > {mellow}
-
-To use only the return value of a lambda is a [getter lambda](#getters):
-
-> {/ action}
 
 Only the following combinations represent useful patterns:
 
@@ -36,7 +32,6 @@ Only the following combinations represent useful patterns:
 | :-------: | :--------: | :--------: | :-----: |
 |   Block   |    Yes     |     No     |   No    |
 |   Then    |     No     |    Yes     |   No    |
-|  Getter   |     No     |     No     |   Yes   |
 | Transform |     No     |    Yes     |   Yes   |
 
 The omitted combinations are one where the three parts are absent (which doesn't make sense) and three more where the descriptor is included alongside the other parts.
@@ -54,9 +49,9 @@ removeLockFile(done: () => void): void
 registerAlarmHandler(onAlarm: () => void): number
 ```
 
-> Remove lockfile: done!.
+> Remove lockfile: {done.}.
 >
-> Register alarm handler: on alarm! / handler ID
+> Register alarm handler: {on alarm.} / handler ID
 
 ## Thens
 
@@ -67,16 +62,6 @@ readFile(filename: string, done: (err?, data) => void): void
 ```
 
 > Read file: filename, {error*, file contents}.
-
-## Getters
-
-Getters have no parameters but do have a return value. These must have a closure over some kind of state and use it for their return else they would be constant functions.
-
-```typescript
-castThankful(): { () => number }
-```
-
-> Cast thankful / {/ timestamp}
 
 ## Transforms
 
