@@ -1,4 +1,4 @@
-# Behavior
+# Method behavior
 
 |          ID          | Name            |
 | :------------------: | :-------------- |

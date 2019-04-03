@@ -16,5 +16,5 @@ If we used instead a single descriptor, we would have to more or less repeat the
 
 ## Data structures with implicit support
 
-* [Lists](list.md#implicit-return)
-* [Futures](future.md#implicit-return)
+* [Lists](../3-data-structure/1-list.md#implicit-return)
+* [Futures](../3-data-structure/4-future.md#implicit-return)
