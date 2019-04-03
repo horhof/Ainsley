@@ -1,7 +1,4 @@
----
-id: boolean
-title: Booleans
----
+# Boolean
 
 Terms which are boolean values are called *switches*. Methods which return a boolean value are called *predicates*.
 
@@ -20,3 +17,4 @@ isNetworkSimulated(): boolean
 ```
 
 > Is network simulated?
+

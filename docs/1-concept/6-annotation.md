@@ -1,9 +1,6 @@
----
-id: annotation
-title: Annotations
----
+# Annotation
 
-Both [methods](method.md) and [terms of data](term.md) can be *annotated* in order to represent their specific features, which means the normal representation is modified. For example, a feature of a term is that it may be optional and an optional term is represented in Apipecto differently than one which is mandatory.
+Both [methods](1-method.md) and [terms of data](3-term.md) can be *annotated* in order to represent their specific features, which means the normal representation is modified. For example, a feature of a term is that it may be optional and an optional term is represented in Apipecto differently than one which is mandatory.
 
 Annotation is achieved by either prefixing, suffixing, infixing, or surrounding the term / method with symbols, or by modifying its descriptor.
 
@@ -20,3 +17,5 @@ Annotation is achieved by either prefixing, suffixing, infixing, or surrounding 
   * [Future](future.md)
 * Behavioral features of methods
   * [Implicit return](implicit-return.md)
+  * Throwing
+  * Purity

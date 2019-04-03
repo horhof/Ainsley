@@ -1,7 +1,4 @@
----
-id: method
-title: Methods
----
+# Method
 
 Methods are actions that a unit can perform. They expose these actions as goals that other units want to achieve. Those other units call the method in order to achieve the goal.
 
@@ -23,7 +20,7 @@ resetUsersByAge(minAge: number, maxAge: number): void
 
 ## Returns
 
-Returns are separated from the parameters by a prefix. If the language permits multiple return values, then returns are separated the same as parameters. See also [implicit returns](implicit-return.md).
+Returns are separated from the parameters by a prefix. If the language permits multiple return values, then returns are separated the same as parameters. See also [implicit returns](../4-behavior/1-implicit-return.md).
 
 ```
 findOldestRecord(): number

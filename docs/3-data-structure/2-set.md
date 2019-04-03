@@ -1,7 +1,4 @@
----
-id: set
-title: Sets
----
+# Set
 
 A set is a fixed collection of values. It may or may not be ordered but its members can be identified either by an index key or their position within the data structure.
 

@@ -1,7 +1,4 @@
----
-id: list
-title: Lists
----
+# List
 
 A list contains many elements of the same type. It's assumed the elements are ordered by their position.
 

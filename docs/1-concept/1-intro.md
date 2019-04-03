@@ -1,23 +1,20 @@
----
-id: introduction
-title: Introduction
----
+# Introduction
 
 Apipecto is a notation for describing the public message API of a unit of code. The goal is to know at a glance how the unit is supposed to be used.
 
-See [the SSL keychain example](ssl-example.md).
+See [the SSL keychain example](../4-example/1-ssl.md).
 
 ## What?
 
-A unit’s API is just a list of available goals. Apipecto has a set of entries, each called an *interface*, to describe each [method](method.md) (and possibly [properties](property.md)) on the unit.
+A unit’s API is just a list of available goals. Apipecto has a set of entries, each called an *interface*, to describe each [method](2-method.md) (and possibly [properties](5-property.md)) on the unit.
 
-A method receives zero or more incoming [terms of data](term.md) as *parameters* and sends back zero or more terms of data as a *returns*. (Methods aren’t the only behavior because a term can be a [lambda](lambda.md), which is a behavior passed around like a piece of data.)
+A method receives zero or more incoming [terms of data](3-term.md) as *parameters* and sends back zero or more terms of data as a *returns*. (Methods aren’t the only behavior because a term can be a [lambda](../2-type/3-lambda.md), which is a behavior passed around like a piece of data.)
 
 Each interface describes the method, its parameters, returns, and other special features.
 
 ## Why?
 
-The API *could* be could be described just by copying all the method signatures or function prototypes into the documentation:
+The API *could* be could be described just by copying all the method signatures or function prototypes into the documentation:	
 
 > isSslEnabled(): boolean
 >

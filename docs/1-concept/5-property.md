@@ -1,7 +1,4 @@
----
-id: property
-title: Properties
----
+# Property
 
 Apipecto doesn't distinguish between properties and methods returning terms which are implicit or switches.
 

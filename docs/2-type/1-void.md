@@ -1,7 +1,4 @@
----
-id: void
-title: Voids
----
+# Void
 
 Terms which are void are called *optional.* Methods which always return void are called *procedures*.
 

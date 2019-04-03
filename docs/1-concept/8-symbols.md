@@ -1,7 +1,4 @@
----
-id: symbols
-title: List of symbols
----
+# List of symbols
 
 ## Prefixes
 

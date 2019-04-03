@@ -1,11 +1,16 @@
----
-id: ssl-example
-title: SSL keychain
----
+# SSL keychain
 
 The SSL keychain is responsible for managing the PEM file on disk, generating the private key within, generating CSRs that will match that key, and adding or removing any signed certificates.
 
-## Message API
+## Public
+
+- Is SSL enabled?
+- Generate private key: strength* / MD5
+- Generate CSR: details, EV? / CSR text
+- Install certificate: text / error code*
+- [Certificate checksums]
+- (Restart webserver).
+- Listen?: hostname + port
 
 ### Is SSL enabled?
 

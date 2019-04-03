@@ -1,7 +1,4 @@
----
-id: lambda
-title: Lambdas
----
+# Lambda
 
 Lambdas follow the same rules as [methods](method.md). They're just a method appearing in the place of [terms of data](term.md). They generally have the same three parts a method:
 

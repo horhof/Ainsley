@@ -1,7 +1,4 @@
----
-id: descriptor
-title: Descriptors
----
+# Descriptor
 
 Descriptors for methods can be annotated in order to specify features of the entire method. The rest of the method (it's parameters and returns) are left alone and the descriptors's annotation alone indicates the feature.
 

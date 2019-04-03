@@ -1,7 +1,4 @@
----
-id: future
-title: Futures
----
+# Future
 
 A future is a container for a value that will be available at some future time. The [descriptor](descriptor.md) is written as if the asynchronity of it is an implementation detail (e.g. a promise for a model instance is just called "model instance") but since it's an important part of method signatures, it's represented.
 

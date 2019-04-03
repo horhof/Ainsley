@@ -1,7 +1,4 @@
----
-id: map
-title: Maps
----
+# Map
 
 A term can describe not an overall collection, or its individual members, but instead the *way* in which a maps keys and values are related, without saying anything about how many members are in the collection.
 

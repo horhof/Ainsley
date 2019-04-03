@@ -1,7 +1,4 @@
----
-id: implicit-return
-title: Implicit returns
----
+# Implicit return
 
 If the descriptor for a method or lambda is itself a description of the term that is returned, then there's no need to repeat it.
 
